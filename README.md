@@ -9,4 +9,7 @@
 6. Create Admin_service
 7. Config Server Integration of services
 8. Create gateway server and integrate config server
+
+# Front-end
+1. Create the source code of front end by Angular
  
