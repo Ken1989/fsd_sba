@@ -1,0 +1,57 @@
+:host {
+    text-align: center;
+}
+
+:host ::ng-deep .ant-layout-header {
+    background: white;
+    color: #fff;
+}
+
+img {
+    margin-top: 12px;
+    height: 70px;
+}
+
+:host ::ng-deep .ant-layout-content {
+    background: rgb(229, 229, 229);
+    color: #fff;
+    min-height: 120px;
+    line-height: 120px;
+}
+
+:host> ::ng-deep .ant-layout {
+    margin-bottom: 48px;
+}
+
+:host ::ng-deep .ant-layout:last-child {
+    margin: 0;
+}
+
+.login-form-container {
+    position: absolute;
+    top: 15rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5rem 8rem;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.content_back_ground {
+    background: #F1F1F1 url('../../../assets/images/MM2.jpg');
+    background-size: cover;
+}
+
+.login-form {
+    max-width: 300px;
+    width: 250px;
+}
+
+.login-form-forgot {
+    float: right;
+}
+
+.login-form-button {
+    width: 100%;
+}
