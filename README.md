@@ -20,6 +20,11 @@
 3. Seeting the zuul and ribbon
 
 #System_service
+1. Using Feign anotition to call rest api 
+2. Implement token generator and validation method
+
+
+#System_service
 
 # Front-end
 1. Create the source code of front end by Angular
