@@ -1,5 +1,7 @@
 package cn.ibm.com.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,11 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public SbaUser saveSbaUser(SbaUser sbaUser) {
 		return this.sbaUserRepository.save(sbaUser);
+	}
+
+	@Override
+	public List<SbaUser> findallUser() {
+		return this.sbaUserRepository.findAll();
 	}
 
 }

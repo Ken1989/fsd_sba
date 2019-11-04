@@ -15,3 +15,65 @@ spring:
       discovery: 
         service-id: config_server
         enabled: true
+
+# 服务管理配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"        
+        exclude:           
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+# 网关配置
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false # 停用超时设置
+        isolation:
+          thread:
+            timeoutInMilliseconds: 80000 
+    
+swagger.enabled: true
+
+
+apiurl:
+  gatewayurl: http://localhost:9000
+  
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+
+  routes:        
+    sba_admin:
+      path: /admin/**
+      serviceId: sba_admin
+      stripPrefix: false
+      sensitiveHeaders:
+    sba_system:
+      path: /system/**
+      serviceId: sba_system
+      stripPrefix: false
+      sensitiveHeaders: Cookie,Set-Cookie # Exclude authorization from sensitive headers
+    sba_training:
+      path: /training/**
+      serviceId: sba_training
+      stripPrefix: false
+      sensitiveHeaders:
+    sba_payment:
+      path: /payment/**
+      serviceId: sba_payment
+      stripPrefix: false
+      sensitiveHeaders:
