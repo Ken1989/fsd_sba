@@ -18,13 +18,15 @@
 1. Finished the gateway config and jwt security component
 2. Setting the router for each service instance
 3. Seeting the zuul and ribbon
+4. Token configuration 
 
 #System_service
 1. Using Feign anotition to call rest api 
 2. Implement token generator and validation method
 
-
-#System_service
+#User-Service
+1. Using JPA for support dao 
+2. Creating the controller for register or find user
 
 # Front-end
 1. Create the source code of front end by Angular
