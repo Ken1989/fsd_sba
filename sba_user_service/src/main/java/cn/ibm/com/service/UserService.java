@@ -18,4 +18,12 @@ public interface UserService {
 	 * @return
 	 */
 	public List<SbaUser> findallUser();
+	
+	
+	/**
+	 * Find the user by name
+	 * @param name
+	 * @return
+	 */
+	public SbaUser findUserByName(String name);
 }

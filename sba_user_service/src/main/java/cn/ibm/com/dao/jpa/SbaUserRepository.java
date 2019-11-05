@@ -5,4 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SbaUserRepository extends JpaRepository<SbaUser, Long> {
 
+	public SbaUser findByName(String name);
 }

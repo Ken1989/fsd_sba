@@ -25,4 +25,9 @@ public class UserServiceImpl implements UserService{
 		return this.sbaUserRepository.findAll();
 	}
 
+	@Override
+	public SbaUser findUserByName(String name) {
+		return this.sbaUserRepository.findByName(name);
+	}
+
 }
