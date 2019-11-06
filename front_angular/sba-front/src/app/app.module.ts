@@ -16,6 +16,13 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { ContentComponent } from './shared/content/content.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
+import { AlertComponent } from './shared/alert/alert.component';
+import { CourseComponent } from './view/course/course.component';
+import { MentorComponent } from './view/mentor/mentor.component';
+import { UserComponent } from './view/user/user.component';
+import { CourseListComponent } from './view/course-list/course-list.component';
+import { MentorListComponent } from './view/mentor-list/mentor-list.component';
+import { UserListComponent } from './view/user-list/user-list.component';
 
 registerLocaleData(en);
 
@@ -29,6 +36,13 @@ registerLocaleData(en);
     ContentComponent,
     FooterComponent,
     BreadcrumbComponent,
+    AlertComponent,
+    CourseComponent,
+    MentorComponent,
+    UserComponent,
+    CourseListComponent,
+    MentorListComponent,
+    UserListComponent,
     
   ],
   imports: [
