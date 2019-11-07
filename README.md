@@ -32,7 +32,12 @@
 1. Create the source code of front end by Angular
 2. Install the zorro core 
 3. Create the layout, one is login layout and other is homepage
-4. Seting the router
+4. Seting the router and use hash
+5. Create the core component like user, mentor list and implement the function
+6. Add the proxy file that can forward RestAPI request
+7. Set the child router
+8. Add the Jenkins file
+9. Add the Docker file
  
  # Database
 1. Create the instance for every service
