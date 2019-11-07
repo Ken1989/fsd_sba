@@ -39,7 +39,12 @@
 8. Add the Jenkins file
 9. Add the Docker file
  
- # Database
+#CICD
+1. Install Jenkins image by docker
+2. Seting the git and some jobs for deployment
+3. Add the docker files and jenkins file to each applications
+
+# Database
 1. Create the instance for every service
  	--System db include (admin, user, mentor, permission config basic information)
  		CREATE DATABASE `sba_system` CHARACTER SET utf8 COLLATE utf8_general_ci;
@@ -57,3 +62,7 @@
 #Question
 1.	Different module has the same function, how to aviod this problme
 2.	If each module use the config server, then how to choose right properties
+
+Finished
+
+Thanks
