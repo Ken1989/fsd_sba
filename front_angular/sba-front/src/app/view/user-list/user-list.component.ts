@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CourseService } from 'src/app/service/course.service';
+import { AlertService } from 'src/app/service/alert.service';
 
 @Component({
   selector: 'app-user-list',
