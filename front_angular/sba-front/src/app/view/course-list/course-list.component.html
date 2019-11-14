@@ -1,1 +1,74 @@
-<p>course-list works!</p>
+<div class="content-container">
+    <div class="main_article">
+        <div class="search_area">
+            <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm(validateForm.value)">
+                <ul class="mock_table row3">
+                    <li>
+                        <label>
+                            <span class="table_th">Mentor Name</span>
+                            <span class="table_input">
+                                <nz-form-item>
+                                    <nz-form-control>
+                                        <input nz-input formControlName="mentorName">
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <span class="table_th">Skill Type</span>
+                            <span class="table_input">
+                                <nz-form-item>
+                                    <nz-form-control>
+                                        <nz-select formControlName="skillType" nzAllowClear
+                                            nzPlaceHolder="Select Skill Type">
+                                            <nz-option *ngFor="let option of skillTypeList" [nzValue]="option.key"
+                                                [nzLabel]="option.value">
+                                            </nz-option>
+                                        </nz-select>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <button type="submit" class="btn">Search</button>
+                        <button type="button" class="btn" (click)="clearAll()">Clear All</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div class="user_content">
+            <nz-table #middleTable [nzFrontPagination]="false" [nzData]="dataSet" [nzLoading]="loading"
+                [nzTotal]="total" [(nzPageIndex)]="pageIndex" [(nzPageSize)]="pageSize"
+                (nzPageIndexChange)="refreshPage()" nzBordered="true" nzSize="middle">
+                <thead>
+                    <tr>
+                        <th class="user_th">Course No</th>
+                        <th class="user_th">Course Name</th>
+                        <th class="user_th">Course Type</th>
+                        <th class="user_th">Duration</th>
+                        <th class="user_th">Mentor</th>
+                        <th class="user_th" width="260">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of middleTable.data">
+                        <td class="user_td">{{data.courseno}}</td>
+                        <td class="user_td">{{data.coursename}}</td>
+                        <td class="user_td">{{data.coursetype}}</td>
+                        <td class="user_td">{{data.duration}}</td>
+                        <td class="user_td">{{data.mentor}}</td>
+                        <td class="user_td">
+
+                            <a (click)="regist(data.courseno)">Register</a>
+                            &nbsp;&nbsp;
+                            <a (click)="disable(data.courseno)">Disable</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </nz-table>
+        </div>
+    </div>
+</div>

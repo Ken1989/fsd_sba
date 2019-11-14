@@ -5,6 +5,7 @@ import * as moment from 'moment';
 import { first } from 'rxjs/operators';
 import { CourseService } from 'src/app/service/course.service';
 import { AlertService } from 'src/app/service/alert.service';
+import { NewCourse } from 'src/app/shared/module/newCourse';
 
 @Component({
   selector: 'app-course',

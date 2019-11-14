@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CourseService } from 'src/app/service/course.service';
 import { AlertService } from 'src/app/service/alert.service';
+import { Course } from 'src/app/shared/module/course';
 
 @Component({
   selector: 'app-mentor-list',
