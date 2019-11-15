@@ -45,26 +45,23 @@
                 (nzPageIndexChange)="refreshPage()" nzBordered="true" nzSize="middle">
                 <thead>
                     <tr>
-                        <th class="user_th">Course No</th>
                         <th class="user_th">Course Name</th>
                         <th class="user_th">Course Type</th>
-                        <th class="user_th">Duration</th>
-                        <th class="user_th">Mentor</th>
+                        <th class="user_th">Course Duration</th>
+                        <th class="user_th">Mentor Name</th>
                         <th class="user_th" width="260">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let data of middleTable.data">
-                        <td class="user_td">{{data.courseno}}</td>
-                        <td class="user_td">{{data.coursename}}</td>
-                        <td class="user_td">{{data.coursetype}}</td>
+                        <td class="user_td">{{data.name}}</td>
+                        <td class="user_td">{{data.skillType}}</td>
                         <td class="user_td">{{data.duration}}</td>
-                        <td class="user_td">{{data.mentor}}</td>
+                        <td class="user_td">{{data.mentorName}}</td>
                         <td class="user_td">
-
-                            <a (click)="regist(data.courseno)">Register</a>
+                            <a (click)="regist(data.id)">Register</a>
                             &nbsp;&nbsp;
-                            <a (click)="disable(data.courseno)">Disable</a>
+                            <a (click)="disable(data.id)">Disable</a>
                         </td>
                     </tr>
                 </tbody>

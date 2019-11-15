@@ -4,6 +4,7 @@ import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 import lombok.Data;
 @Data
@@ -14,7 +15,8 @@ public class Course {
 	private Integer id;
 	private String name;
 	private String description;
-	private String skill;
+	private String skillType;
+	private Integer duration;
 	private Date startDate;
 	private Date endDate;
 	private String mentorName;
@@ -23,6 +25,11 @@ public class Course {
 	private Integer progress;
 	private String userName;
 	
+	@Transient
+	private int page;
+	
+	@Transient
+	private int pageSize;
 	
 	
 

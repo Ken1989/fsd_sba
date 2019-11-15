@@ -70,13 +70,13 @@ export class CourseListComponent implements OnInit {
       pageSize: this.pageSize == null ? 8 : this.pageSize
     }
 
-    return this.http.post('training/courselist', json);
+    return this.http.post('course/list', json);
   }
 
 
   // Init dropdown list
   getSkillTypeList(): any {
-    this.http.get('training/skillTypeList/').subscribe(res => {
+    this.http.get('course/skillTypeList/').subscribe(res => {
       this.skillTypeList = [];
       this.skillTypeList.push({ key: '', value: 'ALL' });
       res.forEach(element => {
@@ -87,7 +87,7 @@ export class CourseListComponent implements OnInit {
 
   // Disable class
   disableCourse(id) {
-    this.http.delete('training/disable/' + id).subscribe(res => {
+    this.http.delete('course/disable/' + id).subscribe(res => {
       if (res.data == true) {
         this.nzMessageService.info('This course have already been disabled');
       }

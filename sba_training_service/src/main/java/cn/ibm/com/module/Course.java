@@ -10,7 +10,8 @@ public class Course {
 	private Integer id;
 	private String name;
 	private String description;
-	private String skill;
+	private String skillType;
+	private Integer duration;
 	private Date startDate;
 	private Date endDate;
 	private String mentorName;
@@ -18,7 +19,6 @@ public class Course {
 	private String status;
 	private Integer progress;
 	private String userName;
-	
 	
 	
 
